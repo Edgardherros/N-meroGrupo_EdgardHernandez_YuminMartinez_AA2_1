@@ -12,10 +12,9 @@ enum class objectType
 class Map
 {
 public:
-	Map();
+	
 	int filas;
 	int columnas;
-	Map** m_map;
 	objectType m_Type;
-	void printMap();
+	//void printMap();
 };
