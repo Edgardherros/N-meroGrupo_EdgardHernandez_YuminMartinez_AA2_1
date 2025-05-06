@@ -1,5 +1,6 @@
 #pragma once
-#include <iostream>
+#include "Player.h"
+#include "NPC.h"
 enum class objectType
 {
 	PLAYER,
@@ -15,6 +16,7 @@ public:
 	
 	int filas;
 	int columnas;
-	objectType m_Type;
+	objectType** m_Type;
+
 	//void printMap();
 };
