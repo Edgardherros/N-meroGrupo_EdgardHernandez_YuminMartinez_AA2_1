@@ -2,10 +2,11 @@
 #include <iostream>
 #include <Windows.h>
 #include <time.h>
+#include "Player.h"
+#include "NPC.h"
 int main()
 {
 	srand(time(NULL));
-	//GetAsyncKeyState();
-	//Map map;
-		
+	Map map;
+	map.initMap();
 }

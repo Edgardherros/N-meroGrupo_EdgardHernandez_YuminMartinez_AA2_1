@@ -8,8 +8,8 @@ public:
 	int m_PosY;
 	int money;
 
-	Player();
-	void playerMoviment();
+	//Player();
+	//void playerMoviment();
 };
 enum class Teclas
 {
@@ -19,9 +19,9 @@ enum class Teclas
 	VK_LEFT, 
 	VK_RIGHT
 };
-int Random(int vmin, int vmax)
+/*int Random(int vmin, int vmax)
 {
 	int random = vmin + rand() % (vmax - vmin + 1);
 	return random;
 	
-}
+}*/

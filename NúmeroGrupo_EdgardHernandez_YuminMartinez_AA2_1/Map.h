@@ -17,6 +17,6 @@ public:
 	int filas;
 	int columnas;
 	objectType** m_Type;
-
+	void initMap();
 	//void printMap();
 };

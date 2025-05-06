@@ -5,7 +5,7 @@ class NPC
 public:
 	int npc_PosX;
 	int npc_PosY;
-	NPC();
+	//NPC();
 	void npcMoviment();
 };
 
