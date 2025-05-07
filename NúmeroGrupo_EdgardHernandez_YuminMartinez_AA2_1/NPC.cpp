@@ -1,5 +1,5 @@
-#include "NPC.h"
 
+#include "NPC.h"
 void NPC::npcMoviment()
 {
 	

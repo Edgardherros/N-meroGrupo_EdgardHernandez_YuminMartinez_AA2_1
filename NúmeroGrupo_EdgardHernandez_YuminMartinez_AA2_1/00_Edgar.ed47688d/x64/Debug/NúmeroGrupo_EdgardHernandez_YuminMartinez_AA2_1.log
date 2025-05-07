@@ -1,2 +1,14 @@
-﻿  Map.cpp
-  NúmeroGrupo_EdgardHernandez_YuminMartinez_AA2_1.vcxproj -> C:\Users\Edgar Hernández\OneDrive - UNIR\Escritorio\AQui\0_EdgardHernandez_YuminMartinez_AA2_1\NúmeroGrupo_EdgardHernandez_YuminMartinez_AA2_1\x64\Debug\00_EdgardHernandez_YuminMartinez_AA2_1.exe
+﻿  main.cpp
+C:\Users\Usuario\Desktop\projecte\N-meroGrupo_EdgardHernandez_YuminMartinez_AA2_1\NúmeroGrupo_EdgardHernandez_YuminMartinez_AA2_1\main.cpp(6,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Map.cpp
+  Player.cpp
+C:\Users\Usuario\Desktop\projecte\N-meroGrupo_EdgardHernandez_YuminMartinez_AA2_1\NúmeroGrupo_EdgardHernandez_YuminMartinez_AA2_1\Map.h(20,8): error C2143: error de sintaxis: falta ';' delante de '*'
+  (compilando archivo de origen "Player.cpp")
+  
+C:\Users\Usuario\Desktop\projecte\N-meroGrupo_EdgardHernandez_YuminMartinez_AA2_1\NúmeroGrupo_EdgardHernandez_YuminMartinez_AA2_1\Map.h(20,2): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+  (compilando archivo de origen "Player.cpp")
+  
+C:\Users\Usuario\Desktop\projecte\N-meroGrupo_EdgardHernandez_YuminMartinez_AA2_1\NúmeroGrupo_EdgardHernandez_YuminMartinez_AA2_1\Map.h(20,31): error C2238: símbolos (token) inesperados delante de ';'
+  (compilando archivo de origen "Player.cpp")
+  
+  Generando código...

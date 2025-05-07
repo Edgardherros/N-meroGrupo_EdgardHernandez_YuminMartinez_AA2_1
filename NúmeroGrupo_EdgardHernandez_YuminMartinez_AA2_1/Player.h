@@ -1,27 +1,27 @@
 #pragma once
-#include <iostream>
-#include <time.h>
+#include "Map.h"
+#include "funtions.h"
 class Player
 {
-public:
+	
+private:
 	int m_PosX;
 	int m_PosY;
-	int money;
+	int money = 0;
+	Player();
+	
+public:
 
-	//Player();
+	int getPosX() const { return m_PosX; }
+	int getPosY() const { return m_PosY; }
+	
 	//void playerMoviment();
 };
-enum class Teclas
+
+
+int Random(int vmin, int vmax)
 {
-	VK_ESCAPE,
-	VK_UP,
-	VK_DOWN, 
-	VK_LEFT, 
-	VK_RIGHT
-};
-/*int Random(int vmin, int vmax)
-{
-	int random = vmin + rand() % (vmax - vmin + 1);
-	return random;
-	
-}*/
+
+	return vmin + rand() % (vmax - vmin + 1);
+
+}

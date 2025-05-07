@@ -1,12 +1,12 @@
+
+#include "funtions.h"
 #include "Map.h"
-#include <iostream>
-#include <Windows.h>
-#include <time.h>
-#include "Player.h"
-#include "NPC.h"
 int main()
 {
 	srand(time(NULL));
+	Sleep(100);
 	Map map;
-	map.initMap();
+	map.printMap();
+
+	//GetAsyncKeyState() &0x8000
 }

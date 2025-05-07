@@ -1,63 +1,7 @@
+#include "funtions.h"		
 #include "Map.h"
-#include <iostream>
-#include <fstream>
-#include <sstream> 
 
-/*Map::Map()
-{
-	m_map** = new m_map * [19];
-	for (int i = 0; i < 19; i++)
-	{
-		m_map[i]* = new Map[55];
-	}
-	for (int i = 0; i < 19; i++)
-	{
-		for (int j = 0; j < 55; j++)
-		{
-			if (i == 0 || j == 0 || i == 18 || j == 54)
-			{
-				m_map[i][j] = objectType::LIMIT;
-			}
-			else
-			{
-				m_map[i][j] = objectType::DEFAULT;
-			}
-		}
-	}
-	for (int i = 0; i < 19; i++)
-	{
-		for (int j = 0; j < 55; j++)
-		{
-			if (m_map[i][j] == objectType::LIMIT)
-			{
-				std::cout << "X";
-			}
-			else if (m_map[i][j] == objectType::DEFAULT)
-			{
-				std::cout << " ";
-			}
-			else if (m_map[i][j] == objectType::PLAYER)
-			{
-				std::cout << "P";
-			}
-			else if (m_map[i][j] == objectType::NPC)
-			{
-				std::cout << "N";
-			}
-			else if (m_map[i][j] == objectType::MONEY)
-			{
-				std::cout << "$";
-			}
-			else if (m_map[i][j] == objectType::CAR)
-			{
-				std::cout << "C";
-			}
-
-		}
-		std::cout << std::endl;
-	}
-}*/
-void Map::initMap()
+ Map::Map()
 {
 	// Inicializar el mapa
 	std::ifstream myFile("config.txt");
@@ -77,19 +21,71 @@ void Map::initMap()
 	std::getline(myFile, line3);
 	//std::cout << line3 << " ";
 	std::string item;
-	
-	if (std::getline(ss, item, ';')) 
+
+	if (std::getline(ss, item, ';'))
 	{
 		filas = std::stoi(item);  // convertir "50" a entero
 	}
-	if (std::getline(ss, item, ';')) 
+	if (std::getline(ss, item, ';'))
 	{
 		columnas = std::stoi(item);  // convertir "70" a entero
 	}
+
+	//std::cout << filas << " " << columnas << std::endl;
+
+	myFile.close();
 	
-	std::cout << filas << " " << columnas << std::endl;
-		
-		myFile.close();
+	m_Type = new objectType * [filas];
+	for (int i = 0; i < columnas; i++)
+	{
+		m_Type[i] = new objectType[columnas];
+	}
+	for (int i = 0; i < filas; i++)
+	{
+		for (int j = 0; j < columnas; j++)
+		{
+			if (i == 0 || j == 0 || i == filas-1 || j == columnas-1 || j == limitLosSantos || j == limitSanFierro)
+			{
+				m_Type[i][j] = objectType::LIMIT;
+			}
+			else
+			{
+				m_Type[i][j] = objectType::DEFAULT;
+			}
+
+			
+		}
+	}
+	int x = m_playerPtr->getPosX();
+	int y = m_playerPtr->getPosY();
+	m_Type[x][y] = objectType::PLAYER;
+	
+
 }
-	// Leer el txt para inicializar filas y columas
+
+
+void Map::printMap()
+{
+	for (int i = 0; i < filas; i++)
+	{
+		for (int j = 0; j < columnas; j++)
+		{
+			if (m_Type[i][j] == objectType::LIMIT)
+			{
+				std::cout << " X";
+			}
+			else if (m_Type[i][j] == objectType::DEFAULT)
+			{
+				std::cout << "  ";
+			}
+			else if (m_Type[i][j] == objectType::PLAYER)
+			{
+				std::cout << " P";
+			}
+			
+		}
+		std::cout << std::endl;
+	}
+}
+	
 	

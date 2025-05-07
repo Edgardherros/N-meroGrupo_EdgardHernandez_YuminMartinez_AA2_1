@@ -1,6 +1,6 @@
 #pragma once
 #include "Player.h"
-#include "NPC.h"
+#include "funtions.h"
 enum class objectType
 {
 	PLAYER,
@@ -12,11 +12,16 @@ enum class objectType
 };
 class Map
 {
-public:
-	
+private:
 	int filas;
 	int columnas;
+	int limitLosSantos = columnas / 3;
+	int limitSanFierro = limitLosSantos * 2;
+	Player* m_playerPtr = nullptr; // Puntero a Player
+public:
+
+	Map();
 	objectType** m_Type;
 	void initMap();
-	//void printMap();
+	void printMap();
 };
